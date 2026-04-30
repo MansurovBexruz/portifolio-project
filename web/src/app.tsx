@@ -1,108 +1,31 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { Home } from "./pages/home";
-import { Single } from "./pages/single";
-import { Category } from "./pages/category";
-import { Writer } from "./pages/writer";
-import { About } from "./pages/about";
-import { Contact } from "./pages/contact";
-import { Profile } from "./pages/profile";
-import { ProfileEdit } from "./pages";
-import { Login } from "./pages/login";
-import { Register } from "./pages/register";
-import { NotFound } from "./pages/not-found";
-import { ProtectedRoute } from "./routes/protectedRoute";
-import { PublicRoute } from "./routes/publicRoute";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Experience from "./components/Experience";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
-export function App() {
+function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Navigate to="/home" replace />} />
+    <div className="relative min-h-screen bg-[#050816] text-slate-100">
+      {/* Background orbs */}
+      <div className="orb-1" />
+      <div className="orb-2" />
 
-        <Route
-          path="/login"
-          element={
-            <PublicRoute>
-              <Login />
-            </PublicRoute>
-          }
-        />
-        <Route
-          path="/register"
-          element={
-            <PublicRoute>
-              <Register />
-            </PublicRoute>
-          }
-        />
-
-        <Route
-          path="/home"
-          element={
-            <ProtectedRoute>
-              <Home />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/single"
-          element={
-            <ProtectedRoute>
-              <Single />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/writer"
-          element={
-            <ProtectedRoute>
-              <Writer />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/category"
-          element={
-            <ProtectedRoute>
-              <Category />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <ProtectedRoute>
-              <About />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <ProtectedRoute>
-              <Contact />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/profile"
-          element={
-            <ProtectedRoute>
-              <Profile />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/profile-edit"
-          element={
-            <ProtectedRoute>
-              <ProfileEdit />
-            </ProtectedRoute>
-          }
-        />
-
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   );
 }
+
+export default App;

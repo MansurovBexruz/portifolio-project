@@ -1,49 +1,14 @@
 import express from "express";
 import cors from "cors";
+import { usersRouter } from "./routes";
 
 const app = express();
-app.use(cors());
-app.use(express.json());
+app.use(express.json()); // parse incoming requests with JSON payloads
+app.use(cors()); // disabled CORS for all routes
 
-let users: { name: string; email: string; password: string }[] = [];
+app.use("/users", usersRouter);
 
-app.get("/api/news", async (req, res) => {
-  await new Promise((r) => setTimeout(r, 20));
-  res.json({});
+const PORT = 3000;
+app.listen(PORT, () => {
+	console.log(`Server is running on port ${PORT}...`);
 });
-
-app.get("/api/categories", (req, res) => {
-  res.json([
-    { id: 3, name: "Featured", path: "/single" },
-    { id: 5, name: "Sport", path: "/category" },
-    { id: 7, name: "Writer", path: "/writer" },
-  ]);
-});
-
-app.get("/api/pages", (req, res) => {
-  res.json([
-    { id: 2, name: "Profile Market", path: "/profile" },
-  ]);
-});
-
-app.post("/api/users/register", (req, res) => {
-  const { name, email, password } = req.body;
-  if (!name || !email || !password)
-    return res.status(400).json({ message: "All fields are required" });
-  const exists = users.find((u) => u.email === email);
-  if (exists) return res.status(400).json({ message: "User already exists" });
-  users.push({ name, email, password });
-  res.json({ message: "User registered successfully" });
-});
-
-app.post("/api/users/login", (req, res) => {
-  const { email, password } = req.body;
-  if (!email || !password)
-    return res.status(400).json({ message: "Email and password required" });
-  const user = users.find((u) => u.email === email && u.password === password);
-  if (!user)
-    return res.status(401).json({ message: "Invalid email or password" });
-  res.json({ name: user.name, email: user.email });
-});
-
-app.listen(3001, () => console.log("Server running on http://localhost:3001"));
