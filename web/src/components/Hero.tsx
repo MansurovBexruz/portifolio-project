@@ -127,9 +127,8 @@ export default function Hero() {
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-sky-400 via-indigo-500 to-sky-400 p-0.5">
                 <div className="h-full w-full overflow-hidden rounded-full bg-slate-900">
                   <img
-                    src="/public/image.png"
+                    src="/public/photo_2026-05-04_22-36-21.jpg"
                     alt="Bexruz Mansurov - Developer"
-                    className="h-full w-full object-cover"
                   />
                 </div>
               </div>
