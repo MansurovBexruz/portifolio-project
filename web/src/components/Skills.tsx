@@ -23,7 +23,7 @@ export default function Skills() {
       <div ref={containerRef} className="mx-auto max-w-6xl px-6">
         {/* Header */}
         <div className="reveal mb-16 text-center">
-          <span className="section-badge rounded-full px-4 py-1.5 font-mono text-xs">02. skills</span>
+          <span className="section-badge rounded-full px-4 py-1.5 font-mono text-xs">02. Ko'nikmalar</span>
           <h2 className="mt-6 mb-4 text-4xl font-black text-white lg:text-5xl">
             Tech <span className="gradient-text">Stack</span>
           </h2>

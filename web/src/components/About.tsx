@@ -36,7 +36,7 @@ export default function About() {
         <div className="reveal mb-16 text-center">
           <span className="section-badge rounded-full px-4 py-1.5 font-mono text-xs">01. about</span>
           <h2 className="mt-6 mb-4 text-4xl font-black text-white lg:text-5xl">
-            Men <span className="gradient-text">haqimda</span>
+            About <span className="gradient-text">me</span>
           </h2>
           <div className="mx-auto h-0.5 w-16 rounded-full bg-gradient-to-r from-sky-400 to-indigo-500" />
         </div>
@@ -93,10 +93,9 @@ export default function About() {
             {/* Info grid */}
             <div className="grid grid-cols-2 gap-3 pt-2">
               {[
-                { label: "Name", value: "Alex Morgan" },
-                { label: "Location", value: "New York, USA" },
-                { label: "Email", value: "alex@example.com" },
-                { label: "Status", value: "Open to Work" }
+                { label: "Name", value: "Mansurov Bexruz" },
+                { label: "Location", value: "Nurafshon, Tashkent" },
+                { label: "Email", value: "mansurovbexruz21@gmail.com" }
               ].map(({ label, value }) => (
                 <div key={label} className="flex gap-2">
                   <span className="text-sm text-slate-500">{label}:</span>
@@ -111,9 +110,9 @@ export default function About() {
 
             <a
               href="#contact"
-              className="btn-primary relative z-10 inline-flex items-center gap-2 rounded-xl px-7 py-3 text-sm font-semibold text-white"
+              className="btn-primary relative z-10 inline-flex items-center gap-2 rounded-xl border border-white/20 px-7 py-3 text-sm font-semibold text-white shadow-white/10 transition-transform hover:-translate-y-0.5 hover:shadow-lg"
             >
-              Let's Connect
+              Bog'lanish
             </a>
           </div>
         </div>

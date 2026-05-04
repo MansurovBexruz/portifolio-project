@@ -58,7 +58,7 @@ export default function Contact() {
 
       <div ref={containerRef} className="mx-auto max-w-6xl px-6">
         <div className="reveal mb-16 text-center">
-          <span className="section-badge rounded-full px-4 py-1.5 font-mono text-xs">05. contact</span>
+          <span className="section-badge rounded-full px-4 py-1.5 font-mono text-xs">05. Bog'lanish</span>
           <h2 className="mt-6 mb-4 text-4xl font-black text-white lg:text-5xl">
             Let's <span className="gradient-text">Work Together</span>
           </h2>
@@ -121,7 +121,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="glass-card space-y-5 rounded-2xl border border-white/5 p-8">
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
-                  <label className="mb-2 block text-xs font-medium text-slate-400">Your Name</label>
+                  <label className="mb-2 block text-xs font-medium text-slate-400">Ismingiz</label>
                   <input
                     type="text"
                     name="name"
@@ -147,27 +147,27 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="mb-2 block text-xs font-medium text-slate-400">Subject</label>
+                <label className="mb-2 block text-xs font-medium text-slate-400">Mavzu</label>
                 <input
                   type="text"
                   name="subject"
                   value={form.subject}
                   onChange={handleChange}
                   required
-                  placeholder="Project Inquiry / Job Opportunity"
+                  placeholder="Loyiha bo'yicha so'rov / Ish imkoniyati"
                   className="form-input w-full rounded-xl px-4 py-3 text-sm"
                 />
               </div>
 
               <div>
-                <label className="mb-2 block text-xs font-medium text-slate-400">Message</label>
+                <label className="mb-2 block text-xs font-medium text-slate-400">Xabar</label>
                 <textarea
                   name="message"
                   value={form.message}
                   onChange={handleChange}
                   required
                   rows={5}
-                  placeholder="Tell me about your project, timeline, and budget..."
+                  placeholder="Loyihangiz, muddatingiz va byudjetingiz haqida gapirib bering..."
                   className="form-input w-full resize-none rounded-xl px-4 py-3 text-sm"
                 />
               </div>
@@ -192,7 +192,7 @@ export default function Contact() {
                 ) : (
                   <>
                     <Send size={16} />
-                    Send Message
+                    Xabarni yuborish
                   </>
                 )}
               </button>

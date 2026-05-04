@@ -3,10 +3,10 @@ import { Menu, X, Code2 } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" }
+  { label: "Ko'nikmalar", href: "#skills" },
+  { label: "Loyihalar", href: "#projects" },
+  { label: "Tajriba", href: "#experience" },
+  { label: "Bog'lanish", href: "#contact" }
 ];
 
 export default function Navbar() {
@@ -78,7 +78,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile toggle */}
         <button
           className="text-slate-400 transition-colors hover:text-white md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -88,7 +87,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <div
         className={`glass overflow-hidden border-t border-white/5 transition-all duration-300 md:hidden ${
           menuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
